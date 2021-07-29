@@ -1,5 +1,4 @@
 # Weather_app.
-
 > This is part of the Weather-App Project in [The Odin Project's](https://www.theodinproject.com/courses/javascript/lessons/weather-app?ref=lnav) Javascript Curriculum.
 > This App gets the weather of a particular location and also the location of the user using the app.
 > A user can input the name of a city and the app retrieves the weather for that location.
