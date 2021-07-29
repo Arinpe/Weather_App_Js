@@ -100,7 +100,7 @@ weatherForm.addEventListener('submit', async (event) => {
       document.body.style.backgroundImage = `url('http://source.unsplash.com/1600x900/?${name} ')`;
     });
     } catch(e) {
-      console.log(e )
+      cdocument.querySelector('.city').innerText = `Citynotfound`(e.status )
     }
   // await fetch(endpoint)
   //   .then((response) => response.json())
