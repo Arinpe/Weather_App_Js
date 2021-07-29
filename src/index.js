@@ -30,7 +30,7 @@ weatherForm.addEventListener('submit', async (event) => {
       document.querySelector(
         '.humidity',
       ).innerText = `Humidity: ${humidity}%`;
-      document.querySelector(
+        document.querySelector(
         '.wind',
       ).innerText = `Wind speed ${speed}${windSpeed}`;
       document.querySelector('.weather').classList.remove('Loading');
