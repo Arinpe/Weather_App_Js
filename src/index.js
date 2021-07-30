@@ -13,32 +13,32 @@ weatherForm.addEventListener('submit', async (event) => {
 
   try {
     await fetch(endpoint)
-    .then((response) => response.json())
-    .then((data) => {
-      const { name } = data;
-      const { description } = data.weather[0];
-      const { temp, humidity } = data.main;
-      const { speed } = data.wind;
-      const unitSymbol = unit === 'metric' ? '°C' : '°F';
-      const windSpeed = unit === 'metric' ? 'km/h' : 'm/s';
+      .then((response) => response.json())
+      .then((data) => {
+        const { name } = data;
+        const { description } = data.weather[0];
+        const { temp, humidity } = data.main;
+        const { speed } = data.wind;
+        const unitSymbol = unit === 'metric' ? '°C' : '°F';
+        const windSpeed = unit === 'metric' ? 'km/h' : 'm/s';
 
-      document.querySelector('.city').innerText = `Weather in ${name}`;
-      document.querySelector(
-        '.description',
-      ).innerText = `Cloudy: ${description}`;
-      document.querySelector('.temp').innerText = temp + unitSymbol;
-      document.querySelector(
-        '.humidity',
-      ).innerText = `Humidity: ${humidity}%`;
+        document.querySelector('.city').innerText = `Weather in ${name}`;
         document.querySelector(
-        '.wind',
-      ).innerText = `Wind speed ${speed}${windSpeed}`;
-      document.querySelector('.weather').classList.remove('Loading');
-      document.body.style.backgroundImage = `url('http://source.unsplash.com/1600x900/?${name} ')`;
-    });
-    } catch(e) {
-      document.querySelector('.city').innerText = 'Citynotfound'
-    }
+          '.description',
+        ).innerText = `Cloudy: ${description}`;
+        document.querySelector('.temp').innerText = temp + unitSymbol;
+        document.querySelector(
+          '.humidity',
+        ).innerText = `Humidity: ${humidity}%`;
+        document.querySelector(
+          '.wind',
+        ).innerText = `Wind speed ${speed}${windSpeed}`;
+        document.querySelector('.weather').classList.remove('Loading');
+        document.body.style.backgroundImage = `url('http://source.unsplash.com/1600x900/?${name} ')`;
+      });
+  } catch (e) {
+    document.querySelector('.city').innerText = 'Citynotfound';
+  }
   // await fetch(endpoint)
   //   .then((response) => response.json())
   //   .then((data) => {
@@ -49,18 +49,18 @@ weatherForm.addEventListener('submit', async (event) => {
   //     const unitSymbol = unit === 'metric' ? '°C' : '°F';
   //     const windSpeed = unit === 'metric' ? 'km/h' : 'm/s';
 
-    //   document.querySelector('.city').innerText = `Weather in ${name}`;
-    //   document.querySelector(
-    //     '.description',
-    //   ).innerText = `Cloudy: ${description}`;
-    //   document.querySelector('.temp').innerText = temp + unitSymbol;
-    //   document.querySelector(
-    //     '.humidity',
-    //   ).innerText = `Humidity: ${humidity}%  `;
-    //   document.querySelector(
-    //     '.wind',
-    //   ).innerText = `Wind speed ${speed}${windSpeed}`;
-    //   document.querySelector('.weather').classList.remove('Loading');
-    //   document.body.style.backgroundImage = `url('http://source.unsplash.com/1600x900/?${name} ')`;
-    // });
+  //   document.querySelector('.city').innerText = `Weather in ${name}`;
+  //   document.querySelector(
+  //     '.description',
+  //   ).innerText = `Cloudy: ${description}`;
+  //   document.querySelector('.temp').innerText = temp + unitSymbol;
+  //   document.querySelector(
+  //     '.humidity',
+  //   ).innerText = `Humidity: ${humidity}%  `;
+  //   document.querySelector(
+  //     '.wind',
+  //   ).innerText = `Wind speed ${speed}${windSpeed}`;
+  //   document.querySelector('.weather').classList.remove('Loading');
+  //   document.body.style.backgroundImage = `url('http://source.unsplash.com/1600x900/?${name} ')`;
+  // });
 });
