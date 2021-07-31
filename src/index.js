@@ -41,7 +41,7 @@ weatherForm.addEventListener('submit', async (event) => {
     document.querySelector(
       '.description',
     ).innerText = '';
-    document.querySelector('.temp').innerText ='';
+    document.querySelector('.temp').innerText = '';
     document.querySelector(
       '.humidity',
     ).innerText = '';
