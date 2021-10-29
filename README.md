@@ -1,59 +1,73 @@
-# Weather_app.
-> This is part of the Weather-App Project in [The Odin Project's](https://www.theodinproject.com/courses/javascript/lessons/weather-app?ref=lnav) Javascript Curriculum.
-> This App gets the weather of a particular location and also the location of the user using the app.
-> A user can input the name of a city and the app retrieves the weather for that location.
+# Car Rentals
 
+A RESTFUL API built with Ruby on Rails. It uses Auth0 to implement Authentication & Authorization.
 
-![screenshot](weatherapp.png)
+## About this project
+
+This API is built as the back end for a web application built with React on the front end and is separately deployed to Netlify.
+
+## End Points
+
+There are a couple of endpoints exposed by this api and can be accessed online using [this path]() as the base Url.
+
+## POST
+
+- /users - (create user account)
+- /appointments - (create appointment)
+
+## GET
+
+- /cars - (fetch all cars)
+- /cars/:id - (fetch single car)
+- /users/:id - (fetch user appointments)
 
 ## Built With
 
-- Javascript (Fetch, ES6)
-- HTML
-- CSS
+- Ruby on Rails
+- Postgresql
+- Heroku
+- Rspec
+- Auth0
 
 ## Live Demo
 
-[Live Demo Link](https://cranky-newton-3938a9.netlify.app/)
+For the full working application Click [here]()
 
-
-## Getting Started
+## Installation
 
 To get a local copy up and running follow these simple example steps.
 
-- Clone the repository and there you go! ;-)
-
-### Prerequisites
-
-- Get a browser like Chrome and Firefox in their most recent versions
-- Code Editor (VSCode)
-
 ### Setup
 
-- Open a terminal and run the command `git clone https://github.com/Arinpe/Weather_App.git`
-- cd Weather_app
-- run `npm install`
-- run `npm run build`
-- Open the index.html file in the dist folder with any browser of your choice.
+Clone [this](https://github.com/Arinpe/Car_Rentals) repository
 
-### for webpack run:
+### Follow:
 
-`npm run build`
+1. cd into the project directory
+2. run bundle install
+3. run rails db:migrate
+4. run rails db:seed
+5. replace ENV variables with yours in app/lib/json_web_token.rb
+6. Navigate to localhost:3001
+
+### Run tests
+  - Run:
+    - rpsec
 
 ## Author
 
-👤 **Adesuyi Adetola**
+  👤 **Adetola Adesuyi**
 
-- Github: [@Arinpe](https://github.com/Arinpe)
-- Twitter: [@_detola_](https://twitter.com/_detola_)
-- LinkedIn: [@aadetola](https://www.linkedin.com/in/aadetola)
+  - Github:[@Arinpe](https://github.com/Arinpe)
+  - Twitter:[@_detola_](https://twitter.com/_detola_)
+  - LinkedIn:[aadetola](https://www.linkedin.com/in/aadetola)
 
 ## 🤝 Contributing
 
-Contributions, issues and feature requests are welcome!
+  - Contributions, issues and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/Arinpe/Weather_App/issues).
+  - Feel free to check the [issues page](https://github.com/somoye123/Car_Rentaalsapi/issues)
 
 ## Show your support
 
-Give a ⭐️ if you like this project!
+  - Give a ⭐️ if you like this project!
