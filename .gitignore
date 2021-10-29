@@ -7,6 +7,11 @@
 # Ignore bundler config.
 /.bundle
 
+# Ignore the default SQLite database.
+/db/*.sqlite3
+/db/*.sqlite3-journal
+/db/*.sqlite3-*
+
 # Ignore all logfiles and tempfiles.
 /log/*
 /tmp/*
@@ -25,3 +30,9 @@
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+
+# Ignore master key for decrypting credentials and more.
+node_modules/
+/config/credentials/development.key
+
+/config/credentials/production.key
