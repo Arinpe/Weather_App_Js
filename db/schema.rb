@@ -41,20 +41,25 @@ ActiveRecord::Schema.define(version: 2020_11_18_124310) do
     t.string "date"
     t.string "city"
     t.index ["car_id"], name: "index_appointments_on_car_id"
-    t.index ["user_id", "car_id"], name: "index_appointments_on_user_id_and_car_id", unique: true
+    t.index ["user_id", "car_id"], name: "index_appointments_on_user_id_and_car_id"
     t.index ["user_id"], name: "index_appointments_on_user_id"
   end
 
   create_table "cars", force: :cascade do |t|
-    t.string "name"
+    t.string "make"
+    t.string "year"
+    t.string "horsepower"
+    t.string "model"
+    t.string "price"
     t.text "description"
+    t.string "img_url"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "users", force: :cascade do |t|
     t.string "username"
-    t.string "email"
+    t.string "password_digest"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

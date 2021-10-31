@@ -1,5 +1,5 @@
 module Api::V1
-  class CarsController < SecuredController
+  class CarsController < ApplicationController
     def index
       render json: Car.all, status: :ok
     end

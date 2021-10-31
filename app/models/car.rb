@@ -5,9 +5,6 @@ class Car < ApplicationRecord
 
   has_one_attached :image
 
-  validates :name, :description, :image, presence: true
+  validates :year, :horsepower, :make, :model, :price, :description, :img_url, presence: true
 
-  def img_url
-    url_for(image)
-  end
 end
