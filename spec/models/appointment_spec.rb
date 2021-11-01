@@ -7,7 +7,6 @@ RSpec.describe Appointment, type: :model do
   end
 
   describe 'Validations' do
-    it { should validate_presence_of(:user_id) }
     it { should validate_presence_of(:car_id) }
     it { should validate_presence_of(:date) }
     it { should validate_presence_of(:city) }

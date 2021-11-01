@@ -1,11 +1,11 @@
 require 'rails_helper'
 
 RSpec.describe Api::V1::CarsController, type: :controller do
-  before { allow(controller).to receive(:authorize_request).and_return(true) }
+  before { allow(controller).to receive(:authorized).and_return(true) }
 
   describe 'use authorize request before action' do
     context 'when authorized' do
-      it { should use_before_action(:authorize_request) }
+      it { should use_before_action(:authorized) }
     end
   end
 
