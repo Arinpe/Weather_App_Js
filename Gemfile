@@ -29,6 +29,8 @@ group :development, :test do
   gem 'sqlite3', '~> 1.4'
   # Use RSpec for specs
   gem 'rspec-rails'
+  gem 'factory_bot_rails'
+  gem 'faker'
 end
 
 group :production do

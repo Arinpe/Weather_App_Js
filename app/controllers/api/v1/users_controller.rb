@@ -9,6 +9,10 @@ module Api::V1
 
   # REGISTER
   def create
+    if current_user
+     render json: "authorized", status: 422
+     return
+    end
     @user = User.create(user_params)
     if @user.valid?
       token = encode_token({user_id: @user.id})
@@ -32,7 +36,7 @@ module Api::V1
 
   
   def show
-    @user = User.find(params[:id])
+    @user = User.find(current_user.id)
     return render json: @user.cars, status: :ok if @user
   end
 

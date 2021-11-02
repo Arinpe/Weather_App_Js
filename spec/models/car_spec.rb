@@ -4,12 +4,17 @@ RSpec.describe Car, type: :model do
   describe 'Associations' do
     it { should have_many(:appointments) }
     it { should have_many(:users).through(:appointments) }
-    it { should have_one_attached(:image) }
   end
 
-  describe 'Validations' do
-    it { should validate_presence_of(:name) }
-    it { should validate_presence_of(:description) }
-    it { should validate_presence_of(:image) }
+  context 'Validations' do
+   
+
+    scenario { should validate_presence_of(:year) }
+    scenario { should validate_presence_of(:description) }
+    scenario { should validate_presence_of(:model) }
+    scenario { should validate_presence_of(:make) }
+    scenario { should validate_presence_of(:horsepower) }
+    scenario { should validate_presence_of(:price) }
+    scenario { should validate_presence_of(:img_url) }
   end
 end
