@@ -54,7 +54,8 @@ module Api::V1
 
   def get_appointments
     appointments = Appointment.where(user_id: current_user.id)
-    render json: appointments, status: :ok
+
+    render json: appointments.to_json(include: [:car]), status: :ok
   end
 
   def auto_login
